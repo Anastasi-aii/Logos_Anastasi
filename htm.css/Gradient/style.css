@@ -1,0 +1,51 @@
+body {
+    font-size: 100px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 4px 4px 8px black, 0 0 1em red;
+    font-family: 'Arsenal', sans-serif;
+}
+
+
+
+.box {
+    width: 14.2857%;
+    height: 740px;
+    padding-top: 280px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.box:nth-child(1) {
+    background: linear-gradient( rgb(233, 49, 49), rgb(116, 11, 11));
+}
+
+
+.box:nth-child(2) {
+    background: linear-gradient( rgb(153, 166, 241), rgb(240, 130, 212));
+}
+
+
+.box:nth-child(3) {
+    background: linear-gradient( rgb(144, 240, 181), rgb(255, 166, 0));
+}
+
+
+.box:nth-child(4) {
+    background: linear-gradient( rgb(131, 106, 85), rgb(63, 95, 57));
+}
+
+
+.box:nth-child(5) {
+    background: linear-gradient( rgb(255, 110, 117), rgb(255, 227, 167));
+}
+
+
+.box:nth-child(6) {
+    background: linear-gradient( rgb(233, 49, 49), rgb(116, 11, 11));
+}
+
+
+.box:nth-child(7) {
+    background: linear-gradient( rgb(119, 76, 36), rgb(156, 156, 156));
+}
