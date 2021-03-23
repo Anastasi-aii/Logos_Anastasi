@@ -1,18 +1,29 @@
-g=0;
-for (i=0; i<=15;i++) {
+let g=11;
+
+let i = g++;
+if (g/g && g/1 && g/i) {
+
+    console.log(i)   
+} else {
+    console.log(false);
+}
+
+
+// g=5;
+// for (i=0; i<=15;i++) {
     
-    if (i % i+1 !== 0) {
-        i=g;
-    }
+//     if (i % i+1 !== 0) {
+//         i=g;
+//     }
 
 
-   if (i/i && i/1 && i% i+1 !== 0) {
-    console.log(g);
-   }
+//    if (i/i && i/1 && i% i+1 !== 0) {
+//     console.log(g);
+//    }
    
        
    
-   } 
+//    } 
 
 
 
