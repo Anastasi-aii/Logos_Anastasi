@@ -1,0 +1,156 @@
+.container {
+    max-width: 1440px;
+    height: 900px;
+
+    margin: 0 auto;
+    padding-top: 44px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+
+
+
+.menu {
+    width: 551px;
+    height: 49px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+} 
+
+
+.menu-link {
+    font-size: 24px;
+    line-height: 32.68px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-link:nth-child(3), .menu-link:hover {
+    color: #2684F7;
+}
+
+
+
+.block {
+    width: 95%;
+    height: 726px;
+    background-color: #EAEBED;
+
+    margin: 0 auto;
+    margin-top: 14px;
+    padding-top: 56px;
+    
+    box-sizing: border-box;
+    border-radius: 41px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.top {
+    width: 852px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 38px;
+
+}
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.container__table {
+    position: absolute;
+
+    width: 945px;
+    height: 80px;
+
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+}
+
+.download-box {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-box:hover {
+    background: #2684F7;
+}
+
+.picture-box {
+    height: 25px;
+    width: 25px;
+}
+
+tr {
+    width: 1100px;
+    height: 64px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    border-radius: 21px; 
+  
+}
+
+tr:hover {
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+td {
+  
+    width: 300px; 
+}
+
+
+.container__download-box {
+    width: 300px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 15px;
+}
+

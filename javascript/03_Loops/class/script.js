@@ -8,9 +8,7 @@ if (g/g && g/1 && g/i) {
     console.log(false);
 }
 
-let i;
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+
 
 
 // g=5;
