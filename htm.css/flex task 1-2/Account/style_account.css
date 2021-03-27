@@ -1,33 +1,4 @@
-.container {
-    max-width: 1440px;
-    height: 900px;
 
-    margin: 0 auto;
-    padding-top: 44px;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-
-.menu {
-    width: 551px;
-    height: 49px;
-
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: space-between;
-} 
-
-
-.menu-link {
-    font-size: 24px;
-    line-height: 32.68px;
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
-}
 
 .menu-link:nth-child(1), .menu-link:hover {
     color: #2684F7;
@@ -36,62 +7,12 @@
 
 
 .block {
-    width: 95%;
-    height: 726px;
-    background-color: #EAEBED;
-
-    margin: 0 auto;
-    margin-top: 14px;
-    padding-top: 46px;
-    padding-bottom: 46px;
-    box-sizing: border-box;
-    border-radius: 41px;
-
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+    padding-top: 0;
 }
 
 
-.side {
-    width: 7.5%;
-    height: 420px;
-    background-color: #fff;
-    
-    margin-right: 2%;
-    margin-left: 3%;
-    border-radius: 30px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.side__box-icon {
-    width: 35px;
-    height: 35px;
-}
-
-.invert, .side__box:hover>.side__box-icon {
-    filter: invert(1);
-}
-
-
-.side__box {
-    width: 67px;
-    height: 67px;
-   
-    margin-top: 5px;
-    margin-bottom: 5px;
-    
-
-    border-radius: 15px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .side__box:nth-child(2), .side__box:hover {
     background-color: #2785F7;
@@ -108,9 +29,10 @@ p {
 
 
 .content-start {
-    width: 45%;
-    height: 100%;
+    width: 42%;
+    height: 679px;
     margin-right: 2%;
+ 
 }
 .andy-cube {
     background-color: #fff;
@@ -160,17 +82,22 @@ p {
 color: #B1B1B1;
 }
 .change-password {
-    margin-top: 4%;
+    margin-top: 20px;
     background-color: #fff;
     border-radius: 30px;
     height: 76%;
 
     padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 25px;
+    padding-top: 30px;
     box-sizing: border-box;
+    
 
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+   justify-content: space-between;
+    flex-direction: column;
+    
 }
 .padlock {
     background: #2785F7;
@@ -183,43 +110,49 @@ color: #B1B1B1;
     filter: invert(1);
 }
 
-.margin{
-    margin-top: -80px;
-}
+
 .password {
-    width: 480px;
+    width: 100%;
     height: 55px;
-
-    
-
 }
+
+.header-password {
+display: flex;
+margin-bottom: 20px;
+
+} 
+
+
+
 .company {
-    width: 45%;
-    height: 100%;
+    width: 42%;
+    height: 679px;
     background-color: #fff;
 
     padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 25px;
+    padding-top: 40px;
     box-sizing: border-box;
+    
     border-radius: 30px;
     margin-right: 2%;
 
-}
-
-
-.rectangle_padlock {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 120px;
-    margin-top: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
+
+
+
 
 .company-name {
-    width: 490px;
+    width: 100%;
     height: 55px;
 }
 .company-addres {
-    width: 490px;
+    width: 100%;
     height: 100px;
 }
 .container-textarea {
@@ -228,12 +161,16 @@ color: #B1B1B1;
     
 }
 .textarea_text {
-    margin-top: 22px;
-    margin-right: 17px;
+   
+    width: 48%;
+    padding-right: 2%;
 }
+
+
+
 .company-data {
     
-    width: 237px;
+    width: 100%;
     height: 55px;
 }
 
@@ -242,15 +179,36 @@ input {
     border: 2px solid #C0C0C0;
     box-sizing: border-box;
     border-radius: 21px;
-   
+    font-family: 'Open Sans', sans-serif;
+    color: #B1B1B1;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 input:focus {
+    border: 3px solid #2785F7;;
+    outline: 0;
     
-        border: 3px solid #2785F7;
-        ;
-       
-        outline: 0 
+  }
+
+  .save {
+    height: 55px;
+    width: 30%;
+    margin-left: 70%;
+    
+    background-color: #2785F7;
+    color: #fff;
+    border: 0;
+    padding: 0;
+    font-size: 20px;
+  
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 16px;
   }
 
 

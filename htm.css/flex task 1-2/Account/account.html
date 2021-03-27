@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="../Menu_container.css" rel="stylesheet">
+    <link href="../side_menu.css" rel="stylesheet">
     <link href="style_account.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="container">
@@ -18,24 +21,25 @@
         </header>
 
         <main class="block">
-            <div class="side">
-                <a href="../Main/main.html" class="side__box">
-                    <img src="../images/folder.svg" alt="#" class="side__box-icon ">
+             <aside class="side">
+                <a class="side__box" href="../Main/main.html">
+                    <img src="../images/folder.svg" alt="#" class="side__box-icon">
                 </a>
-                <div class="side__box">
+                <a class="side__box" href="../Account/account.html" >
                     <img src="../images/monitor.svg" alt="#" class="side__box-icon invert">
-                </div>
-                <div class="side__box">
+                </a>
+                <a class="side__box" href="#">
                     <img src="../images/users-alt.svg" alt="#" class="side__box-icon">
-                </div>
-                <div class="side__box">
+                </a>
+                <a class="side__box" href="#">
                     <img src="../images/cloud-share.svg" alt="#" class="side__box-icon">
-                </div>
-                <div class="side__box">
+                </a>
+                <a class="side__box" href="#">
                     <img src="../images/cog.svg" alt="#" class="side__box-icon">
-                </div>
-            </div>
-                        
+                </a>
+            </aside>
+                 
+            
             <div class="content-start">
                 <div class="andy-cube">
                     <div class="profile-picture box">
@@ -48,31 +52,32 @@
 
 
 
-                <div class="change-password">
+            <form class="change-password">
+                <div class="header-password">
                     <div class="padlock box">
                         <img class="padlock-svg" src="../images/padlock.svg"></img>
                     </div>
 
                     <p class="title">Change Password <br><span class="subtitle">Please choose a password wich is longer than 6 <br>characters</span></p>
-
-
-                    <p class="text margin">Old password<br>
-                        <input class="password" type="password" placeholder="Enter password">
-                    </p>
-
-                    <p class="text margin">New password<br>
-                        <input class="password" type="password" placeholder="Enter password">
-                    </p>
-
-                    <p class="text margin">Confirm password<br>
-                        <input class="password" type="password" placeholder="Enter password">
-                    </p>
-                
                 </div>
+
+                    <label class="text">Old password<br>
+                        <input class="password" type="password" placeholder="Enter password">
+                    </label>
+
+                    <label class="text">New password<br>
+                        <input class="password" type="password" placeholder="Enter password">
+                    </label>
+
+                    <label class="text">Confirm password<br>
+                        <input class="password" type="password" placeholder="Enter password">
+                    </label>
+                    <input class="save" type="submit" value="Save">
+                </form>
             </div>
 
-            <div class="company">
-                <div class="rectangle_padlock">
+            <form class="company">
+                <div class="header-password">
                     <div class="padlock box">
                         <img class="padlock-svg" src="../images/padlock.svg"></img>
                     </div>
@@ -81,34 +86,36 @@
                     <p class="title">Company <br><span class="subtitle">Optional, but we would appreciate if you<br> fill out these form</span></p>
                 </div>
 
-                <p class="textarea_text">Company name<br>
+                <label>Company name<br>
                     <input class="company-name" type="text" placeholder="Logos IT Academy">
-                </p>
+                </label>
 
-                <p class="textarea_text">Company address<br>
+                <label>Company address<br>
                     <input class="company-addres" type="text" placeholder="61, I.Franka, Lviv">
-                </p>
+                </label>
 
 
 
                 <div class="container-textarea">
-                    <p class="textarea_text">Country<br>
+                    <label class="textarea_text">Country<br>
                         <input class="company-data" type="text" placeholder="Enter country">
-                    </p>
+                    </label>
 
-                    <p class="textarea_text">State<br>
+                    <label class="textarea_text">State<br>
                         <input class="company-data" type="text" placeholder="Enter state">
-                    </p>
+                    </label>
 
-                    <p class="textarea_text">City<br>
+                    <label class="textarea_text">City<br>
                         <input class="company-data" type="text" placeholder="Enter city">
-                    </p>
+                    </label>
 
-                    <p class="textarea_text">Postal code<br>
+                    <label class="textarea_text">Postal code<br>
                         <input class="company-data" type="text" placeholder="Enter code">
-                    </p>
+                    </label>
                 </div>
-            </div>
+
+                <input class="save" type="submit" value="Save">
+            </form>
 
 
 
