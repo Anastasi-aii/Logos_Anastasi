@@ -39,4 +39,15 @@
     align-items: center;
 }
 
+@media (max-width: 1080px) {
+    .side { height: 350px; border-radius: 20px;}
+    .side__box { width: 53px;height: 53px;}
+    .side__box-icon { width: 28px;height: 28px;}
+   }
 
+   @media (max-width: 880px) {
+    .side { height: 300px; border-radius: 15px;}
+    .side__box { width: 40px;height: 40px;border-radius: 10px;}
+    .side__box-icon { width: 20px;height: 20px;}
+   }
+   

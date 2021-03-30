@@ -73,6 +73,7 @@ p {
     font-size: 25px;
     color: #000;
     line-height: 1;
+    width: 300px;
 }
 .subtitle {
     font-weight: bold;
@@ -212,6 +213,37 @@ input:focus {
   }
 
 
+
+
+
+
+
+
+@media (max-width: 1400px) {
+    .padlock {margin-right: 40px;}
+    .change-password { padding-right: 33px;}
+}
+
+@media (max-width: 1200px) {
+    .padlock,.profile-picture {margin-right: 35px;width: 55px;height: 55px;}
+    .change-password, .company, .andy-cube { padding-right: 30px;padding-left: 30px;}
+}
+
+@media (max-width: 1080px) {
+    .padlock,.profile-picture {margin-right: 60px;width: 65px;height: 65px;}
+    .change-password { padding-left: 44px;padding-right: 44px;}
+    .side { position: absolute;width: 7%;margin-right: 84%;margin-bottom: 880px;}
+    .block { flex-direction: column;height: 1500px;}
+    .content-start, .company {width: 79%;margin-left: 8%;margin-right: 0;}
+    .company { margin-top: 30px;}
+
+@media (max-width: 880px) {
+    .side {margin-bottom: 980px;margin-right: 83.5%;}
+    .content-start, .company {margin-left: 10%;}
+   
+   }
+   
+   
 
 
 

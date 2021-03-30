@@ -155,9 +155,6 @@
     .content__section-description, .content__section-team {height: 174px;}
     .picture-team {width: 100px;height: 118px;}
     .content__dataPortability { height: 370px;}
-    .side { height: 350px; border-radius: 20px;}
-    .side__box { width: 53px;height: 53px;}
-    .side__box-icon { width: 28px;height: 28px;}
     .content__end { margin-top: 30px;}
    }
 
@@ -168,9 +165,6 @@
     .content__section-description, .content__section-team {height: 154px;}
     .picture-team {width: 80px;height: 98px;}
     .content__dataPortability { height: 330px;}
-    .side { height: 300px; border-radius: 15px;}
-    .side__box { width: 45px;height: 45px;}
-    .side__box-icon { width: 20px;height: 20px;}
     .content__end { margin-top: 20px;}
     .picture-data {width: 100px;height: 95px;}
    }
