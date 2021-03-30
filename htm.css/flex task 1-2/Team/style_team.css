@@ -1,38 +1,16 @@
-.container {
-    max-width: 1440px;
-    height: 900px;
-
-    margin: 0 auto;
-    padding-top: 44px;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
 
 
 
 
-.menu {
-    width: 551px;
-    height: 49px;
-
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: space-between;
-} 
-
-
-.menu-link {
-    font-size: 24px;
-    line-height: 32.68px;
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
-}
 
 .menu-link:nth-child(2), .menu-link:hover {
     color: #2684F7;
 }
+
+.block {
+  
+    justify-content: start;
+  }
 
 .basket {
     position: absolute;
@@ -40,7 +18,7 @@
     height: 75px;
     background-color: #fff;
     margin-bottom: 320px;
-    margin-left: 250px;
+    margin-left: 90%;
     border-radius: 20px;
     
 
@@ -55,23 +33,7 @@
     height: 45px;
 }
 
-.rectangle__container {
-    width: 95%;
-    height: 742px;
-    background-color: #EAEBED;
 
-    margin: 0 auto;
-    margin-top: 14px;
-    padding-top: 46px;
-    padding-bottom: 46px;
-    box-sizing: border-box;
-    border-radius: 41px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 .rectangle {
     width: 23.13%;
@@ -89,15 +51,14 @@
 
 .rectangle:hover {
     background-color: #2684F7;
+    z-index: 1;
 }
 
 .rectangle:hover>.basket {
  display: flex;
 }
 
-.second-group {
-    width: 292px;
-}
+
 
 .group {
     width: 95%;
@@ -116,7 +77,8 @@ img {
 }
 
 .group:nth-child(2) {
-    height: 278px;
+    margin-top: 23px;
+    
 } 
 
 .andy-cube, .date {
@@ -130,7 +92,25 @@ img {
 
 
 
+@media (max-width: 1080px) {
+    .group {height: 250px;}
+    img { height: 80px; width: 80px;}
+    .andy-cube, .date { font-size: 15px;}
+    .basket{ width: 65px;height: 65px;margin-bottom: 250px;}
+    .trash { width: 37px;height: 37px;}
+    .rectangle { border-radius: 30px;}
+   }
 
+   @media (max-width: 880px) {
+    .group {height: 200px;}
+    img { height: 60px; width: 60px;}
+    .andy-cube, .date { font-size: 13px;}
+    .basket{width: 58px;height: 58px;margin-bottom: 200px;}
+    .trash { width: 32px;height: 32px;}
+    .rectangle { border-radius: 20px;}
+   }
+   
+   
 
 
 
