@@ -24,16 +24,9 @@
 
 // // ----------------------------------
 
-// switch (test) {
-//     case 0:
-//       alert( 'Неверно' );
-//       break;
-    
-//       default:
-//       alert( "Верно" );
-//       break;
-//   }
-
+let test = 1;
+(test == true) ? 
+alert('Верно') : alert('Неверно');
 
 
 
@@ -57,23 +50,23 @@
 
 
 
-//#4
-let num=1;
+// //#4
+// let num=1;
 
-switch (num) {
-    case 1:
-        alert( 'зима' );
-        break;
+// switch (num) {
+//     case 1:
+//         alert( 'зима' );
+//         break;
 
-    case 2:
-        alert( 'весна' );
-        break;
+//     case 2:
+//         alert( 'весна' );
+//         break;
 
-    case 3:
-        alert( 'лето' );
-        break;
+//     case 3:
+//         alert( 'лето' );
+//         break;
 
-    case 4:
-        alert( 'осень' );
-        break;
-    }
+//     case 4:
+//         alert( 'осень' );
+//         break;
+//     }
