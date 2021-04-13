@@ -4,11 +4,12 @@ function checkCensorship (from) {
     let secondWord = from.indexOf('bet');
 
     if (firstWord === -1 && secondWord === -1) {
-        console.log (from);
+        return false;
     } else {
-    console.log ('так нельзя');
+    return true;
     }
 }
 
-checkCensorship ('gg gg bet');
+
+console.log (checkCensorship ('gg bet gg'));
 

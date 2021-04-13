@@ -3,11 +3,27 @@ function checkComment (from) {
 
     let secondCheck = from.indexOf('/*');
 
+    let thirdCheck = from.indexOf('*/');
+
     if (firstCheck === -1 && secondCheck === -1) {
-        console.log ('false');
+        if(thirdCheck === -1) {
+            console.log ('false');
+        }
+    
+        if (thirdCheck > -1) {
+            if(secondCheck === -1) {
+                console.log ('false');
+            }
+        } 
+        
+        if (secondCheck > -1) {
+            if(thirdCheck === -1) {
+                console.log ('false');
+            } 
+        }
     } else {
-    console.log ('true');
+        console.log ('true');
     }
 }
 
-checkComment ('/*вапвкак');
+checkComment ('');
