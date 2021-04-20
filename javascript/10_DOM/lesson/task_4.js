@@ -1,11 +1,13 @@
-let ul = document.body.getElementsByClassName('about-us__list');
+let listItems = document.getElementsByTagName('li');
 
-let rows = ul.rows;
 
-let rows =[];
+for (item of listItems) {
+   for (i = 0; i < listItems.length; i ++) {
+      
+      console.log(item.textContent = i);
+      console.log(item);
+   }
+   
 
-for (let row in rows) {
-   rows.push(row);
+    
 }
-
-console.log(cells);

@@ -1,15 +1,12 @@
-let mainMenu = document.querySelector('.main-menu').innerHTML;
+let mainMenu = document.querySelector('.main-menu');
 
-let footer = document.getElementsByTagName('footer').innerHTML;
+let footerCollection = document.getElementsByTagName('footer');
 
-// let newDiv = document.createElement('div');
-// mainMenu.append(newDiv);
-let div = document.createElement('div');
-div.className = "alert";
-div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+let footer = footerCollection.item(0);
 
-document.body.lastChild.append(div);
+let nav = mainMenu.cloneNode(true);
 
+footer.appendChild(nav);
 
-console.log (mainMenu);
-console.log (footer);
+console.log(footer);
+
