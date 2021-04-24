@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        ul {
+            height: 50px;
+            overflow: hidden;
+            transition: all 1s;
+        }
+        .section {
+            width: 400px;
+            height: 44px;
+            background-color: rgb(187, 152, 152);
+            border: 3px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .burger_img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li class="section" id="burger-menu"><img class="burger_img" src="./Hamburger_icon.webp"></li>
+        <li class="section">Строка 1</li>
+        <li class="section">Строка 2</li>
+        <li class="section">Строка 3</li>
+        <li class="section">Строка 4</li>
+        <li class="section">Строка 5</li>
+    </ul>
+    
+
+    <script>
+        let list = document.querySelector('#list');
+        let burgerMenu = document.querySelector('#burger-menu');
+        let counter = 0;
+
+        burgerMenu.addEventListener('click', function() {
+            if (counter == 0) {
+                list.style.height = '500px';
+                counter = 1;
+            } else {
+                list.style.height = '50px';
+                counter = 0;
+            }
+        });
+    </script>
+</body>
+</html>

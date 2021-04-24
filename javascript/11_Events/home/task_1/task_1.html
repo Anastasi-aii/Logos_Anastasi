@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-        }
-        #park, #pug, #raccoon {
-            width: 300px;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
 
-    </style>
-</head>
-<body>
-    <img id=park src="./park.jpg">
-    <img id=pug src="./pug.jpg">
-    <img id=raccoon src="./raccoon.jpg">
+            #park, #pug, #raccoon {
+                width: 300px;
+            }
+        </style>
+    </head>
 
-    <script src="./task_1.js"></script>
-</body>
+    <body>
+        <img data-park="Зеленый парк" id=park src="./park.jpg">
+        <img data-pug="Косоглазый мопс" id=pug src="./pug.jpg">
+        <img data-raccoon="Дружелюбный енот" id=raccoon src="./raccoon.jpg">
+
+        <script>
+            park.onclick = function successfulShopping () {
+                alert(park.dataset.park);
+            }
+
+            pug.onclick = function successfulShopping () {
+                alert(pug.dataset.pug);
+            }
+
+            raccoon.onclick = function successfulShopping () {
+                alert(raccoon.dataset.raccoon);
+            }
+        </script>
+    </body>
 </html>

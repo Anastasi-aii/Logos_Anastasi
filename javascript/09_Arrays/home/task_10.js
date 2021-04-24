@@ -1,12 +1,8 @@
-
-
 function shuffle(array) {
-  array.sort(function () {
-        return Math.random() * Math.random();
-    });
+  array.sort(() => Math.random() - 0.5);
 }
-let arr = [1, 2, 3];
 
+let arr = [1, 2, 3];
 
 shuffle(arr)
 console.log(arr);
