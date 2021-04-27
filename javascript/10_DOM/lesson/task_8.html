@@ -24,7 +24,7 @@
             font-size: 30px;
         }
 
-        #modalWindow {
+        .modalWindow {
             width: 0px;
             height: 0px;
             position: absolute;
@@ -43,7 +43,7 @@
             z-index: 1000;
         }
 
-        #cross {
+        .cross {
             width: 50px;
             height: 50px;
             position: absolute;
@@ -52,26 +52,36 @@
         }
 
 
-        #bg {
+        .bg {
             z-index: 1;
             background-color: rgba(0, 0, 0, 0.363);
             width: 0%;
             height: 100%;
             position: absolute;
             margin-top: -10px;
-           
+        }
+
+        .modal-window__open {
+            height: 400px;
+            width: 700px;
+            border: 2px solid rgb(128, 128, 128);
+            
+        }
+
+        .bg__open {
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <button type="button" id=buy class=purchase>Купить</button>
 
-    <div id="modalWindow">
-        <img id="cross" src="./cross.png">
+    <div id="modalWindow" class="modalWindow">
+        <img id="cross" class="cross" src="./cross.png">
         <p>Покупка прошла успешно!<br> Номер заказа: №43694<br> в ближайшее время с вами свяжется наш менеджер</p>
     </div>
 
-    <div id="bg"></div>
+    <div id="bg" class="bg"></div>
 
 
     <script>
@@ -83,33 +93,28 @@
 
         let bg = document.getElementById('bg');
 
+        let isModalOpen = false;
+        
+        function modalOpen() {
+                bg.classList.add('bg__open');
+                modalWindow.classList.add('modal-window__open');
+                isModalOpen = true;
+        };
 
-        let counter = 1;
+        function modalClose() {
+                bg.classList.remove('bg__open');
+                modalWindow.classList.remove('modal-window__open');
+                isModalOpen = false;
+        };
 
-
-        buyButton.addEventListener('click', function() {
-                modalWindow.style.height = '400px';
-                modalWindow.style.width = '700px';
-                modalWindow.style.border = '2px solid rgb(128, 128, 128)';
-                bg.style.width = '100%';
-                counter = 0;
+        document.addEventListener('click',function() {
+            if (isModalOpen === false) {
+                modalOpen();
+            } else {
+                modalClose();
+            }
         });
-
-        cross.addEventListener('click', function() {
-                modalWindow.style.height = '0px';
-                modalWindow.style.width = '0px';
-                modalWindow.style.border = '0px';
-                counter = 1;
-                bg.style.width = '0%';
-        });
-
-
-
-        {
-               
-            } 
-
-
+       
 
     </script>
 </body>

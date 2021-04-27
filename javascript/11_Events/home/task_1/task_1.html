@@ -18,22 +18,15 @@
     </head>
 
     <body>
-        <img data-park="Зеленый парк" id=park src="./park.jpg">
-        <img data-pug="Косоглазый мопс" id=pug src="./pug.jpg">
-        <img data-raccoon="Дружелюбный енот" id=raccoon src="./raccoon.jpg">
+        <img data-open="Зеленый парк" id=park src="./park.jpg">
+        <img data-open="Косоглазый мопс" id=pug src="./pug.jpg">
+        <img data-open="Дружелюбный енот" id=raccoon src="./raccoon.jpg">
 
         <script>
-            park.onclick = function successfulShopping () {
-                alert(park.dataset.park);
-            }
-
-            pug.onclick = function successfulShopping () {
-                alert(pug.dataset.pug);
-            }
-
-            raccoon.onclick = function successfulShopping () {
-                alert(raccoon.dataset.raccoon);
-            }
+            document.addEventListener('click',function(e) {
+                let elementDataAttribute = document.getElementById(e.target.id).dataset.open;
+                alert(elementDataAttribute);
+            });
         </script>
     </body>
 </html>

@@ -11,19 +11,25 @@
 
     </div>
 
+    <div id="keyboardCode">
+
+    </div>
+
     <script>
         let keyboardKeys = document.getElementById('keyboardKeys');
-        let paragraph = document.createElement('p');
+        let paragraphKey = document.createElement('p');
+        let paragraphCode = document.createElement('p');
 
-        keyboardKeys.prepend(paragraph);
+        keyboardKeys.prepend(paragraphKey);
+        keyboardKeys.prepend(paragraphCode);
 
   
         document.addEventListener('keydown', (event) => {
             const keyName = event.key; 
+            const keyCode = event.code;
             
-            console.log(keyName);
-            paragraph.textContent = keyName;
-       
+            paragraphKey.textContent = keyName;
+            paragraphCode.textContent = keyCode;
         }, false);
     </script>
 

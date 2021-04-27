@@ -5,45 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bgGreen {
+            background: rgb(131, 255, 141);
+        }
+
+        .textColorRed {
+            color: rgb(255, 0, 0);
+        }
+    </style>
 </head>
 <body id="body">
-    <div id="greeting">
+    <div class="greeting">
         <p>Привет посетитель</p>
-        <button class="bgGreen">Привет</button>
-        <button class="textColorRed">Пока</button>
+        <button data-paint="bgGreen" id="green1">Привет</button>
+        <button data-paint="textColorRed" id="red1">Пока</button>
     </div>
 
-    <div id="greeting">
+    <div class="greeting">
         <p>Привет посетитель</p>
-        <button class="bgGreen">Привет</button>
-        <button class="textColorRed">Пока</button>
+        <button data-paint="bgGreen" id="green2">Привет</button>
+        <button data-paint="textColorRed" id="red2">Пока</button>
     </div>
 
-    <div id="greeting">
+    <div class="greeting">
         <p>Привет посетитель</p>
-        <button class="bgGreen">Привет</button>
-        <button class="textColorRed">Пока</button>
+        <button data-paint="bgGreen" id="green3">Привет</button>
+        <button data-paint="textColorRed" id="red3">Пока</button>
     </div>
 
 
 
     <script>
-        let bgGreenCollection = document.querySelectorAll('.bgGreen');
-        let textColorRed = document.querySelectorAll('.textColorRed');
-        let body = document.getElementById('body');
-       
+        document.addEventListener('click',function(e) {
+            
+            let elementDataAttribute = document.getElementById(e.target.id).dataset.paint;
 
-        for (i = 0; i < bgGreenCollection.length; i++) {
-            bgGreenCollection[i].addEventListener('click', function() {
-            body.style.backgroundColor = 'green';
-        });
-    }
-
-        for (i = 0; i < textColorRed.length; i++) {
-            textColorRed[i].addEventListener('click', function() {
-            this.style.color = 'red';
-        });
-    }
+            let greeting = e.target.id;
+            console.log(greeting);
+            document.getElementById(greeting).parentNode.classList.add(elementDataAttribute);       
+        });   
     </script>
 </body>
 </html>

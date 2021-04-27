@@ -5,12 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0 100px 0 100px;
+        }
+        .content {
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .field {
+            width: 30%;
+            height: 30px;
+            border: 1px solid rgb(180, 180, 180); 
+            border-radius: 5px;
+        }
+
+        .field:focus {
+            box-shadow: 0 0 7px rgb(129, 236, 255);
+            outline: 0;
+        }
+
+       
+
+        .move-button {
+            width: 30%;
+            height: 36px;
+            background: rgb(28, 163, 50);
+            color: white;
+            border: 1px solid rgb(180, 180, 180); 
+            border-radius: 5px; 
+        }
+
+        .move-button:hover {
+            background: rgb(24, 136, 43);
+        }
+
+        .move-button:focus {
+            box-shadow: 0 0 10px rgb(129, 255, 146);
+        }
+
+        #transferToPlaceholder {
+            width: 100%;
+        }
+        
+    </style>
 </head>
 <body>
     <h1>Task move</h1>
 
-    <input type="text">
-    <button>move</button>
-    <input type="text">
+    <div class="content">
+        <input id="receivingText" class="field" type="text">
+        <button id="moveButton" class="move-button">move</button>
+        <input id="wrappingText" class="field" type="text">
+    </div>
+
+    <h1>Task placeholder</h1>
+    
+    <input id="transferToPlaceholder" class="field" type="text">
+
+
+    <script>
+        moveButton.addEventListener('click',function(e) {
+            if (receivingText.value !== ' ') {
+            wrappingText.value =  receivingText.value;
+            receivingText.value = ' ';
+            }
+        });
+                
+        transferToPlaceholder.addEventListener('focusout',function(e) {
+            if (transferToPlaceholder.value !== '') {
+                transferToPlaceholder.placeholder = transferToPlaceholder.value;
+                transferToPlaceholder.value = '';
+            }
+        });
+    </script>
 </body>
 </html>
