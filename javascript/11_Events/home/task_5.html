@@ -51,21 +51,14 @@
 
   <script>
     window.addEventListener('scroll', function() {
-    document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+      document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
 
-    if (pageYOffset < document.documentElement.clientHeight) {
-        arrowTop.style.display = 'none';
-    } else {
-        arrowTop.style.display = 'block';
-    }
-  });
+      pageYOffset < document.documentElement.clientHeight ? arrowTop.style.display = 'none' : arrowTop.style.display = 'block';
+      });
 
-  arrowTop.addEventListener('click', function() {
+    arrowTop.addEventListener('click', function() {
     window.scrollTo(pageXOffset, 0);
   });
-       
-
-
   </script>
 
 </body>

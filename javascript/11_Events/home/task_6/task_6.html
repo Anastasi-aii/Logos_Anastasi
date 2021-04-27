@@ -30,12 +30,19 @@
         .burger_img {
             width: 40px;
             height: 40px;
+            background: url(./Hamburger_icon.webp);
+            background-size: 40px 40px;
+            border: 0;
+        }
+
+        .list_open {
+            height: 500px;
         }
     </style>
 </head>
 <body>
     <ul id="list">
-        <li class="section" id="burger-menu"><img class="burger_img" src="./Hamburger_icon.webp"></li>
+        <li class="section" id="open-menu"><button class="burger_img"></button></li>
         <li class="section">Строка 1</li>
         <li class="section">Строка 2</li>
         <li class="section">Строка 3</li>
@@ -46,16 +53,16 @@
 
     <script>
         let list = document.querySelector('#list');
-        let burgerMenu = document.querySelector('#burger-menu');
-        let counter = 0;
+        let openMenu = document.querySelector('#open-menu');
+        let isMenuOpen = 0;
 
-        burgerMenu.addEventListener('click', function() {
-            if (counter == 0) {
-                list.style.height = '500px';
-                counter = 1;
+        openMenu.addEventListener('click', function() {
+            if (isMenuOpen == 0) {
+                list.classList.add('list_open');
+                isMenuOpen = 1;
             } else {
-                list.style.height = '50px';
-                counter = 0;
+                list.classList.remove('list_open');
+                isMenuOpen = 0;
             }
         });
     </script>
