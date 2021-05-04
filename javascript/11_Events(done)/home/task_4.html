@@ -39,7 +39,7 @@
     <script>
         document.addEventListener('click',function(e) {
             
-            let elementDataAttribute = document.getElementById(e.target.id).dataset.paint;
+            let elementDataAttribute = e.target.dataset.paint;
 
             let greeting = e.target.id;
             console.log(greeting);

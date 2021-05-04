@@ -67,7 +67,7 @@
 
     <script>
         moveButton.addEventListener('click',function(e) {
-            if (receivingText.value !== ' ') {
+            if (receivingText.value !== ' ' && receivingText.value !== '') {
             wrappingText.value =  receivingText.value;
             receivingText.value = ' ';
             }

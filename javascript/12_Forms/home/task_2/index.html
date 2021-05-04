@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="first-block" class="block">
+        <header class="header">
+            <h1 class="title__header">Create your account</h1>
+        </header>
+
+        <form class="form" onsubmit="return false;">
+            <label>First Name</label>
+            <input class="form__field" type="text" placeholder="type here..."> 
+
+            <label>Second Name</label>
+            <input class="form__field" type="text" placeholder="type here..."> 
+
+            <label>Email address</label>
+            <input class="form__field" type="email" placeholder="enter email"> 
+
+            <div class="gender">
+                <input name="gender" type="radio" value="man">
+                <span>man</span>
+                <input name="gender" type="radio" value="woman">
+                <span>woman</span>
+            </div>
+
+            <label>Position</label>
+            <select id="select-list" class="form__field">
+                <option>Choose...</option>
+                <option>Frontend</option>
+                <option>Backend</option>
+                <option>QC/QA</option>
+            </select>
+
+            <div class="form__confirmation">
+                <input type="checkbox" id="agree">
+                <span>I agree all statements in Terms of service</span>
+            </div>
+
+            <button id="sign-up" class="form__btn">Sign Up</button>
+        </form>
+    </div>
+ 
+    <div class="block" id="second-content">
+        <div id="avatar"></div> 
+
+        <h2 id='user'>User</h2>
+
+        <a href="#" id="user-email">email</a>
+
+        <span id="post">Должность</span>
+
+        <button id="sign-out">Sign Out</button>
+
+        <footer class="footer">
+            <img src="./facebook.png" class="social-media-icon">
+            <img src="./instagram.png" class="social-media-icon">
+            <img src="./whatsApp.png" class="social-media-icon">
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
