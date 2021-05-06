@@ -14,20 +14,20 @@
         </header>
 
         <form class="form" onsubmit="return false;">
-            <label>First Name</label>
+            <label class="form__text">First Name</label>
             <input class="form__field" type="text" placeholder="type here..."> 
 
-            <label>Second Name</label>
+            <label class="form__text">Second Name</label>
             <input class="form__field" type="text" placeholder="type here..."> 
 
-            <label>Email address</label>
+            <label class="form__text">Email address</label>
             <input class="form__field" type="email" placeholder="enter email"> 
 
             <div class="gender">
                 <input name="gender" type="radio" value="man">
-                <span>man</span>
+                <label>man</label>
                 <input name="gender" type="radio" value="woman">
-                <span>woman</span>
+                <label>woman</label>
             </div>
 
             <label>Position</label>
@@ -40,10 +40,10 @@
 
             <div class="form__confirmation">
                 <input type="checkbox" id="agree">
-                <span>I agree all statements in Terms of service</span>
+                <label>I agree all statements in Terms of service</label>
             </div>
 
-            <button id="sign-up" class="form__btn">Sign Up</button>
+            <input id="sign-up" class="form__btn" type="submit" value="Sign Up"></input>
         </form>
     </div>
  
@@ -59,9 +59,9 @@
         <button id="sign-out">Sign Out</button>
 
         <footer class="footer">
-            <img src="./facebook.png" class="social-media-icon">
-            <img src="./instagram.png" class="social-media-icon">
-            <img src="./whatsApp.png" class="social-media-icon">
+            <img src="./img/facebook.png" class="social-media-icon">
+            <img src="./img/instagram.png" class="social-media-icon">
+            <img src="./img/whatsApp.png" class="social-media-icon">
         </footer>
     </div>
 
