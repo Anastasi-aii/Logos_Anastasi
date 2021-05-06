@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./task_8.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .purchase {
+            width: 200px;
+            height: 80px;
+            background-color: rgb(0, 0, 0);
+            margin-top: 100px;
+            border: 3px solid aquamarine;
+            border-radius: 30px;
+            outline: none;
+            color: aquamarine;
+            font-size: 30px;
+        }
+
+        .modalWindow {
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            margin-top: 200px;
+            background-color: rgb(146, 255, 240);
+            border-radius: 15px;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: rgb(27, 70, 60);
+            font-size: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .cross {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            margin-bottom: 330px;
+            margin-left: 630px;
+        }
+
+
+        .bg {
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.363);
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            margin-top: -10px;
+        }
+
+        .modal-window__open {
+            height: 400px;
+            width: 700px;
+            border: 2px solid rgb(128, 128, 128);
+            
+        }
+
+        .bg__open {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id=buy class=purchase>Купить</button>
+
+    <div id="modalWindow" class="modalWindow">
+        <img id="cross" class="cross" src="./cross.png">
+        <p>Покупка прошла успешно!<br> Номер заказа: №43694<br> в ближайшее время с вами свяжется наш менеджер</p>
+    </div>
+
+    <div id="bg" class="bg"></div>
+
+
+    <script>
+        let buyButton = document.getElementById('buy');
+
+        let modalWindow = document.getElementById('modalWindow');
+
+        let cross = document.getElementById('cross');
+
+        let bg = document.getElementById('bg');
+
+        let isModalOpen = false;
+        
+        function modalOpen() {
+                bg.classList.add('bg__open');
+                modalWindow.classList.add('modal-window__open');
+                isModalOpen = true;
+        };
+
+        function modalClose() {
+                bg.classList.remove('bg__open');
+                modalWindow.classList.remove('modal-window__open');
+                isModalOpen = false;
+        };
+
+        document.addEventListener('click',function() {
+            if (isModalOpen === false) {
+                modalOpen();
+            } else {
+                modalClose();
+            }
+        });
+       
+
+    </script>
+</body>
+</html>

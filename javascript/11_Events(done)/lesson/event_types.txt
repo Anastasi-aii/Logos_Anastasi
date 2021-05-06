@@ -1,0 +1,22 @@
+Mouse events:
+  click
+  contextmenu
+  mouseover / mouseout
+  mousedown / mouseup
+  mousemove
+
+Control elements events:
+  submit 
+  focus
+
+
+Keyboard events:
+  keydown/keyup
+
+
+Browser events:
+  DOMContentLoaded
+
+
+CSS events:
+  transitionend

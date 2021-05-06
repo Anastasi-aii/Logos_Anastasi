@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div data-widget-name="menu">Choose the genre</div>
+
+  <script>
+let divsCollection = document.getElementsByTagName('div');
+
+console.log(divsCollection);
+
+for (div in divsCollection) {
+    console.log(div);
+    let atribut = div.dataset.name;
+    console.log(atribut);
+}
+   
+  </script>
+</body>
+</html>
