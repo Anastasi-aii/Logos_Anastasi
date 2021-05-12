@@ -35,19 +35,22 @@
             top: 102px;
         }
 
-        .checmark {
+        .checkmark {
             background: url(./checkmark.png) no-repeat;
-            background-size: 30px 30px;
+            background-size: 25px 25px;
             position: absolute;
-            right: 267px;
+            width: 25px;
+            height: 25px;
+            right: 538px;
+            top: 102px;
            
         }
 
-        .border-green {
+        .border-true {
             border: 3px solid green;
         }
 
-        .border-red {
+        .border-false {
             border: 3px solid red;
         }
 
@@ -102,30 +105,127 @@
         let password = document.getElementById('password');
 
         let isTrue = document.createElement('div');
+        let isTrue2 = document.createElement('div');
+        let isTrue3 = document.createElement('div');
+        let isTrue4 = document.createElement('div');
+        let isTrue5 = document.createElement('div');
 
 
-
-        let first = /^([a-z]{2,20})+$/i;
-
-
+        let checkName = /^[a-zA-Z]{2,20}$/;
+        let checkEmail = /^[\w\-\.]+\@(\w+\.+)+[\w-]+$/;
+        let checkNumber =/^\+380\d{3}\d{2}\d{2}\d{2}$/;
+        let checkPassword = /^[a-zA-Z0-9_]{8,15}$/;;
 
 
 
 
         button.addEventListener('click',function(e) {
-            console.log (first.test(firstName.value));
-            console.log(firstName.value);
-            if (firstName.value == first) {
-                alert('true');
 
-                firstName.after(isTrue);
+            firstName.after(isTrue);
+
+            if (checkName.test(firstName.value) === true) {
                 isTrue.classList.add('checkmark');
+                firstName.classList.add('border-true');
+
+                isTrue.classList.remove('cross');
+                firstName.classList.remove('border-false');
+
 
             } else {
-                alert('false');
-                firstName.after(isTrue);
                 isTrue.classList.add('cross');
-                firstName.classList.add('border-red');
+                firstName.classList.add('border-false');
+
+                isTrue.classList.remove('checkmark');
+                firstName.classList.remove('border-true');
+            }
+
+
+
+            isTrue2.style.top = '172px';
+            lastName.after(isTrue2);
+
+            if (checkName.test(lastName.value) === true) {
+                isTrue2.classList.add('checkmark');
+                lastName.classList.add('border-true');
+
+                isTrue2.classList.remove('cross');
+                lastName.classList.remove('border-false');
+
+
+            } else {
+                isTrue2.classList.add('cross');
+                lastName.classList.add('border-false');
+
+                isTrue2.classList.remove('checkmark');
+                lastName.classList.remove('border-true');
+                
+            }
+
+
+
+
+            isTrue3.style.top = '239px';
+            email.after(isTrue3);
+
+            if (checkEmail.test(email.value) === true) {
+              
+                isTrue3.classList.add('checkmark');
+                email.classList.add('border-true');
+
+                isTrue3.classList.remove('cross');
+                email.classList.remove('border-false');
+
+            } else {
+                
+                isTrue3.classList.add('cross');
+                email.classList.add('border-false');
+
+                isTrue3.classList.remove('checkmark');
+                email.classList.remove('border-true');
+            }
+
+
+
+
+            isTrue4.style.top = '307px';
+            phone.after(isTrue4);
+
+            if (checkNumber.test(phone.value) === true) {
+                isTrue4.classList.add('checkmark');
+                phone.classList.add('border-true');
+
+                isTrue4.classList.remove('cross');
+                phone.classList.remove('border-false');
+
+            } else {
+               
+                isTrue4.classList.add('cross');
+                phone.classList.add('border-false');
+
+                isTrue4.classList.remove('checkmark');
+                phone.classList.remove('border-true');
+            }
+
+
+
+            isTrue5.style.top = '376px';
+            password.after(isTrue5);
+
+            if (checkPassword.test(password.value) === true) {
+               
+                isTrue5.classList.add('checkmark');
+                password.classList.add('border-true');
+
+                isTrue5.classList.remove('cross');
+                password.classList.remove('border-false');
+
+            } else {
+               
+                isTrue5.classList.add('cross');
+                password.classList.add('border-false');
+
+                isTrue5.classList.remove('checkmark');
+                password.classList.remove('border-true');
             }
             
         });

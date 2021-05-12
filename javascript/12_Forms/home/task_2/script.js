@@ -13,29 +13,37 @@ let selectList = document.getElementById("select-list");
 let optionCollection = document.getElementsByTagName('option')
 
 
+// signUp.addEventListener('click',checkFields());
 
-signUp.addEventListener('click',function(e) {
-        if(agree.checked ) {
-            if(inputsCollection[0].value.length >= 5 && inputsCollection[1].value.length >= 5 && inputsCollection[2].value.length >= 5) {
-                if(gender[0].checked || gender[1].checked) {
-                    if(optionCollection[1].selected || optionCollection[2].selected || optionCollection[3].selected) {
-                        firstBlock.style.display ='none';
-                        secondContent.style.display= 'flex';
-                    }
-                }
-            }
-        }
+function checkFields() {
+    console.log("ff");
+        if(!agree.checked) return;
+        if(inputsCollection[0].value.length < 5 && inputsCollection[1].value.length < 5 && inputsCollection[2].value.length < 5) return;
+
+        if(!gender[0].checked && !gender[1].checked) return;
+        if(!optionCollection[1].selected && !optionCollection[2].selected && !optionCollection[3].selected) return;
+
+        firstBlock.style.display ='none';
+        secondContent.style.display= 'flex';
+    
     
         user.textContent = `${inputsCollection[0].value}  ${inputsCollection[1].value}`;
         userEmail.textContent = inputsCollection[2].value;
         post.textContent = selectList.value;
         
-        if (gender[0].checked) {
-            avatar.classList.add('man');
-        } else {
-            avatar.classList.add('woman');
-        }
-});
+        gender[0].checked ? avatar.classList.add('man') : avatar.classList.add('woman');
+        
+}
+
+// if (document.addEventListener('DOMSubtreeModified', OnSubtreeModified, false)) {
+//     checkFields(e);
+// };
+
+
+
+
+
+
 
 signOut.addEventListener('click',function(e) {
     secondContent.style.display ='none';
