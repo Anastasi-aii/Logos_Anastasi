@@ -6,6 +6,8 @@
     border: 3px solid rgb(153, 153, 153);
 }
 
+
+
 .block:nth-child(2) {
     width: 450px;
     height: 490px;
@@ -63,19 +65,19 @@
 
 .form__btn {
     height: 50px;
-    background-color: rgb(84, 177, 115);
+    background-color: rgb(124, 124, 124);
     color: white;
     border: 1px solid rgb(180, 180, 180); 
     border-radius: 5px; 
     margin-top: 25px;
 }
 
-.form__btn:hover {
-    background-color: rgb(69, 146, 95);
+.active:hover {
+    background-color: rgb(112, 189, 138);
 }
 
 .active {
-    background-color: rgb(44, 160, 83);
+    background-color: rgb(84, 177, 115);
 }
 
 .social-media-icon {

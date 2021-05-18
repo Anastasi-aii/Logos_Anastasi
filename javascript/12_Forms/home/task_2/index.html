@@ -13,15 +13,15 @@
             <h1 class="title__header">Create your account</h1>
         </header>
 
-        <form class="form" onsubmit="checkFields(); return false;">
-            <label class="form__text">First Name</label>
-            <input class="form__field" type="text" placeholder="type here..."> 
+        <form id="form" class="form" onsubmit= 'return false;'>
+            <label for="first-name" class="form__text">First Name</label>
+            <input id="first-name" class="form__field" type="text" placeholder="type here..."> 
 
-            <label class="form__text">Second Name</label>
-            <input class="form__field" type="text" placeholder="type here..."> 
+            <label for="second-name" class="form__text">Second Name</label>
+            <input id="second-name" class="form__field" type="text" placeholder="type here..."> 
 
-            <label class="form__text">Email address</label>
-            <input class="form__field" type="email" placeholder="enter email"> 
+            <label for="email" class="form__text">Email address</label>
+            <input id="email" class="form__field" type="email" placeholder="enter email"> 
 
             <div class="gender">
                 <input name="gender" type="radio" value="man">
@@ -30,7 +30,7 @@
                 <label>woman</label>
             </div>
 
-            <label>Position</label>
+            <label for="select-list">Position</label>
             <select id="select-list" class="form__field">
                 <option>Choose...</option>
                 <option>Frontend</option>
@@ -40,7 +40,7 @@
 
             <div class="form__confirmation">
                 <input type="checkbox" id="agree">
-                <label>I agree all statements in Terms of service</label>
+                <label for="agree">I agree all statements in Terms of service</label>
             </div>
 
             <input id="sign-up" class="form__btn" type="submit" value="Sign Up"></input>

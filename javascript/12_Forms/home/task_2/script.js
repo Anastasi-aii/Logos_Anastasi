@@ -11,39 +11,45 @@ let post = document.getElementById("post");
 let gender = document.getElementsByName('gender');
 let selectList = document.getElementById("select-list");
 let optionCollection = document.getElementsByTagName('option')
+let form = document.getElementById('form');
 
 
-// signUp.addEventListener('click',checkFields());
 
-function checkFields() {
-    console.log("ff");
-        if(!agree.checked) return;
-        if(inputsCollection[0].value.length < 5 && inputsCollection[1].value.length < 5 && inputsCollection[2].value.length < 5) return;
+function onSubmit() {
+    console.log
+    if(checkFields() !== true) return;
+    firstBlock.style.display ='none';
+    secondContent.style.display= 'flex';
 
-        if(!gender[0].checked && !gender[1].checked) return;
-        if(!optionCollection[1].selected && !optionCollection[2].selected && !optionCollection[3].selected) return;
-
-        firstBlock.style.display ='none';
-        secondContent.style.display= 'flex';
+    user.textContent = `${inputsCollection[0].value}  ${inputsCollection[1].value}`;
+    userEmail.textContent = inputsCollection[2].value;
+    post.textContent = selectList.value;
     
-    
-        user.textContent = `${inputsCollection[0].value}  ${inputsCollection[1].value}`;
-        userEmail.textContent = inputsCollection[2].value;
-        post.textContent = selectList.value;
-        
-        gender[0].checked ? avatar.classList.add('man') : avatar.classList.add('woman');
-        
+    let genderImage = gender[0].checked ? 'woman' : 'man';
+    avatar.classList.add(genderImage);
 }
 
-// if (document.addEventListener('DOMSubtreeModified', OnSubtreeModified, false)) {
-//     checkFields(e);
-// };
+function onChange() {
+    if(checkFields() === true) {
+        signUp.classList.add('active');
+    } else {
+        signUp.classList.remove('active');
+    } 
+}
 
+function checkFields() {
+        if(!agree.checked) return;
+        if(!inputsCollection[0].value.length) return;
+        if(!inputsCollection[1].value.length) return;
+        if(!inputsCollection[2].value.length) return;
+        if(!gender[0].checked && !gender[1].checked) return;
+        if(!optionCollection[1].selected && !optionCollection[2].selected && !optionCollection[3].selected) return; 
+        return true; 
+       
+}
 
-
-
-
-
+document.addEventListener('change',onChange);
+form.addEventListener('submit', onSubmit);
 
 signOut.addEventListener('click',function(e) {
     secondContent.style.display ='none';

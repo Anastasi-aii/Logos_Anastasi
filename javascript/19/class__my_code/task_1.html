@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .circle {
+      transition-property: width, height, margin-left, margin-top;
+      transition-duration: 2s;
+      position: fixed;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: red;
+      border-radius: 50%;
+
+      width: 0px;
+      height: 0px;
+      top: 150px;
+      left: 150px;
+    }
+
+    .message-ball {
+        text-align: center;
+        padding-top: 85px;
+        box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+    <button id="btn">Click</button>
+    <div id="circle" class="circle"></div>
+
+
+    <script>
+        let circle = document.getElementById('circle');
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click',() => showCircle(150, 150, 100));
+
+       function showCircle(cx, cy, radius, callback) {
+            circle.style.left = cx + 'px';
+            circle.style.top = cy + 'px';
+
+            setInterval(() => {
+                circle.style.width = radius * 2 + 'px';
+                circle.style.height = radius * 2 + 'px';
+            }, 0);
+
+            circle.addEventListener('transitionend', callback);
+        }; 
+
+        function callback () {
+            let text = document.createElement('div');
+            text.textContent = 'Hello World!';
+            circle.classList.add('message-ball');
+            circle.append(text);
+        };
+    </script>
+</body>
+</html>
+
+
+
+   
