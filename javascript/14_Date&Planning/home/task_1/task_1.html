@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="date"></div>
+    <div id="clock"></div>
+    <hr>
+
+
+    <div class="secundomer-container">
+        <div class="secundomer">
+            <div id="secundomer">00:00:00:00</div>
+            <div class="secundomer__buttons">
+                <button id="start" class="secundomer-button">START</button>
+                <button id="loop" class="secundomer-button">LOOP</button>
+                <button id="paused" class="secundomer-button">STOP</button>
+                <button id="reset" class="secundomer-button">RESET</button>
+            </div>
+        </div>
+        <div id="loop-window"></div>
+    </div>
+    <hr>
+
+    <div class="timer-container">
+        <div class="set-minutes">
+            <p id="timer__set-time" class="timer__text">25</p>
+            <p class="timer__minutes">MINUTES</p>
+            <div class="timer__buttons">
+                <button id="plus" class="secundomer-button timer__button">+</button>
+                <button id="minus" class="secundomer-button timer__button">-</button>
+            </div>
+            
+        </div>
+
+        <div class="timer">
+            <p id="timer__text" class="timer__text">00:00</p>
+            <div>
+                <button id="timer__start" class="secundomer-button">START</button>
+                <button id="timer__stop" class="secundomer-button">STOP</button>
+                <button id="timer__reset" class="secundomer-button">RESET</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>
