@@ -1,9 +1,6 @@
 {
     function clock() {
-     
-       
-
-        window.setInterval(function(){
+        function Update1Sec(){
             let date = new Date();
             let hours = date.getHours();
             let minutes = date.getMinutes();
@@ -14,25 +11,26 @@
 
             let clock = hours + ':' + minutes + ':' + seconds;
             document.getElementById('clock').innerHTML = clock;
-        },1000);
+        }
 
-
-
-
-        window.setInterval(function(){
+        function Update30Min(){
             let date = new Date();
             let day = date.getDate();
             let mounth = date.getMonth() + 1;
             let year = date.getFullYear();
-    
             if (mounth < 10) mounth = '0' + mounth;
             if (day < 10) day = '0' + day; 
 
             let dateNow = day + '.' + mounth + '.' + year;
             document.getElementById('date').innerHTML = dateNow;
-        },10000)
-    }
+        }
 
+        Update30Min();
+        Update1Sec();
+
+        window.setInterval(Update1Sec,1000);
+        window.setInterval(Update30Min,60000)
+    }
     clock();
 }
 
@@ -41,20 +39,27 @@
 
 
 {
-    let loopItems = document.querySelectorAll('.loop__item');
     let loopWindow = document.getElementById('loop-window');
     const secundomer = document.getElementById('secundomer');
-    let milliseconds = 0;
+    let counter = 0;
     let timer;
 
     const start = () => {
         if(timer) clearInterval(timer);
-        timer = setInterval(() => {
-            milliseconds += 10;
-            let dateTimer = new Date(milliseconds);
-            secundomer.innerHTML = ('0' + dateTimer.getUTCHours()).slice(-2) + ':' + ('0' + dateTimer.getUTCMinutes()).slice(-2) + ':' + ('0' + dateTimer.getUTCSeconds()).slice(-2) + ':' +('0' + dateTimer.getUTCMilliseconds()).slice(-3,-1);
+
+        function Timer(){
+            counter += 10;
+            let dateTimer = new Date(counter);
+
+            let hours = ('0' + dateTimer.getUTCHours()).slice(-2);
+            let minutes = ('0' + dateTimer.getUTCMinutes()).slice(-2);
+            let seconds = ('0' + dateTimer.getUTCSeconds()).slice(-2);
+            let milliseconds = ('0' + dateTimer.getUTCMilliseconds()).slice(-3,-1);
+
+            secundomer.innerHTML = hours + ':' + minutes + ':' + seconds + ':' + milliseconds;
             
-        },10);
+        }
+        timer = setInterval(Timer,10);
     };
 
     const paused = () => {
@@ -63,9 +68,9 @@
 
     const reset = () => {
         clearInterval(timer);
-        milliseconds = 0;
+        counter = 0;
         secundomer.innerHTML = '00:00:00:00';
-        
+        let loopItems = document.querySelectorAll('.loop__item');
         for (let loopItem of loopItems) {
             loopItem.remove();
         }
@@ -74,10 +79,12 @@
     const loop = () => {
         let string = document.createElement('p');
         let secundomer = document.getElementById('secundomer');
+        let loopItems = document.querySelectorAll('.loop__item');
         string.innerHTML = secundomer.innerHTML;
         string.classList.add('loop__item');
         loopWindow.append(string);
-        if (loopItems.length >= 6) {
+        
+        if (loopItems.length >= 5) {
             loopItems[0].remove();
         }
     }
@@ -120,7 +127,6 @@ document.addEventListener('click', (e) => {
       
     });
     let minutesLeft = +timerText.textContent;
-    console.log(minutesLeft);
     let date = new Date('Jan 1 2022 00:'+ minutesLeft +':00');
 
 
