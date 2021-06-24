@@ -1,46 +1,45 @@
-
-
 function CoffeeMachine(name,
     power) {
       this.name = name;
       this.power = power;
+      this.isOn = 0;
   }
 
-  CoffeeMachine.prototype.on = function() {
-    if (counter === 0) {
+CoffeeMachine.prototype = {
+  on() {
+    if (this.isOn === 0) {
       console.log(`${this.name} power on`);
-      myCoffeeMachine.makeCoffee();
-      counter = 1;
+      this.isOn = 1;
       return;
     }
-  }
+  },
 
-  let counter = 0;
+  off() {
+    const powerOff = () => {
+      this.isOn = 0;
+      clearTimeout(this.timeToCoffee);
+      console.log(`${this.name} power off`);
+    } 
 
 
+    if(!this.timeToCoffee) {
+      powerOff()
+    } else {
+      setTimeout(powerOff, 2000);
+    }
+  },
 
-
-  CoffeeMachine.prototype.setPower = function (userPower){
-    CoffeeMachine.power = userPower;
-  }
-
-  CoffeeMachine.prototype.makeCoffee = function() {
-    let timer = setTimeout(function() {
+  makeCoffee() {
+    this.timeToCoffee = setTimeout(function() {
       console.log(`Cup of coffee strength in ${CoffeeMachine.power}`)
     }, 2000);
+  },
 
-    CoffeeMachine.prototype.off = function() {
-      if (counter === 1) {
-        counter = 0;
-        clearTimeout(timer);
-        console.log(`${this.name} power off`);
-        return;
-      }
-    }
-  }
-
-
-
+  setPower (userPower) {
+    CoffeeMachine.power = userPower;
+  },
+}
+ 
   
 const myCoffeeMachine = new CoffeeMachine('Ingrid',
     20);
